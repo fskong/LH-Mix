@@ -1,11 +1,8 @@
 import torch
 def multilabel_categorical_crossentropy(y_true, y_pred, mix_ratio):
     loss_mask = y_true != -100
-    # print (y_true.masked_select(loss_mask).size(), y_true.masked_select(loss_mask)[0: 10])
     y_true = y_true.masked_select(loss_mask).view(-1, y_pred.size(-1))
     y_pred = y_pred.masked_select(loss_mask).view(-1, y_true.size(-1))
-    # print (y_true.size(), y_true[0: 10])
-    # print (y_pred.size(), y_pred[0: 10])
     y_pred = (1 - 2 * y_true) * y_pred
     y_pred_neg = y_pred - y_true * 1e12
     y_pred_pos = y_pred - (1 - y_true) * 1e12
