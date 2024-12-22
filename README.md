@@ -4,7 +4,7 @@ This work has been accepted as the long paper ''LH-Mix: Local Hierarchy Correlat
 
 ## Data Preprocess:
 
-The code is based on "Implement of HPT: Hierarchy-aware Prompt Tuning for Hierarchical Text Classification" . We appreciate their sharing.
+The code is based on "HPT: Hierarchy-aware Prompt Tuning for Hierarchical Text Classification". We appreciate their sharing.
 
 Please refer to https://github.com/wzh9969/HPT.
 
