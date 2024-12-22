@@ -117,7 +117,7 @@ if __name__ == '__main__':
             for i in range(max_depth):
                 prefix.append(tokenizer.vocab_size + num_class + i)
                 prefix.append(tokenizer.vocab_size + num_class + max_depth)
-            prefix.append(tokenizer.sep_token_id)  # nyt: [30688, 30696, 30689, 30696, 30690, 30696, 30691, 30696, 30692, 30696, 30693, 30696, 30694, 30696, 30695, 30696, 102]
+            prefix.append(tokenizer.sep_token_id)
 
             def data_map_function(batch, tokenizer):
                 new_batch = {'input_ids': [], 'token_type_ids': [], 'attention_mask': [], 'labels': [], 'all_label_flat': []}
